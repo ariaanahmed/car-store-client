@@ -1,0 +1,62 @@
+[
+    {
+      "img": "https://i.postimg.cc/NMP1t1kt/reg3.png",
+      "name": "Regular Toy Car for kids",
+      "price": 15,
+      "star_rating": 4.3,
+      "Other": [
+        {
+          "vehicle_name": "Brand new Regular Toy Car The Blue Edition",
+          "vehicle_image": "https://i.postimg.cc/nL0QDS1d/reg1.png",
+          "quantity": 10,
+          "seller": "mercedes"
+        },
+        {
+          "vehicle_name": "Regular Toy Car The Gray Edition",
+          "vehicle_image": "https://i.postimg.cc/Y0nHNgPB/reg2.jpg",
+          "quantity": 15,
+          "seller": "ferrari"
+        }
+      ]
+    },
+    {
+      "img": "https://i.postimg.cc/jSjGQL6R/sport2.png",
+      "name": "Brand New Sports Toy Car",
+      "price": 25,
+      "star_rating": 4.9,
+      "Other": [
+        {
+          "vehicle_name": "Red Edition Brand new Sport Toy Car",
+          "vehicle_image": "https://i.postimg.cc/c4jqsftP/sport1.png",
+          "quantity": 5,
+          "seller": "audi"
+        },
+        {
+          "vehicle_name": "Blue edition the Racing Car",
+          "vehicle_image": "https://i.postimg.cc/8c7SH4rB/sport3.png",
+          "quantity": 30,
+          "seller": "tata"
+        }
+      ]
+    },
+    {
+      "img": "https://i.postimg.cc/gJdy8tQQ/truck2.png",
+      "name": "The new toy truck yellowgreen edition",
+      "price": 35,
+      "star_rating": 4.9,
+      "Other": [
+        {
+          "vehicle_name": "Different types of truck for kids",
+          "vehicle_image": "https://i.postimg.cc/hPSS68Rn/truck1.png",
+          "quantity": 5,
+          "seller": "m5y"
+        },
+        {
+          "vehicle_name": "The brand new lightgreen truck for kids",
+          "vehicle_image": "https://i.postimg.cc/2yg7bjDF/truck3.png",
+          "quantity": 30,
+          "seller": "toyota"
+        }
+      ]
+    }
+  ]
