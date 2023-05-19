@@ -9,6 +9,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './components/Home/Home';
+import AllToys from './components/pages/AllToys';
+import AddAToy from './components/pages/AddAToy';
+import MyToys from './components/pages/MyToys';
+import Blogs from './components/pages/Blogs';
+import Login from './components/pages/Login';
+import Registration from './components/pages/Registration';
 
 const router = createBrowserRouter([
   {
@@ -18,13 +24,43 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/alltoys',
+        element: <AllToys/>
+      },
+      {
+        path: '/addatoy',
+        element: <AddAToy/>
+      },
+      {
+        path: '/MyToys',
+        element: <MyToys/>
+      },
+      {
+        path: '/blogs',
+        element: <Blogs/>
+      },
+      {
+        path: '/Login',
+        element: <Login/>
+      },
+      {
+        path: '/Registration',
+        element: <Registration/>
       }
     ]
   },
+  {
+    path: '*',
+    element: <div className="text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <h3 className='font-bold text-3xl'>404 not found</h3>
+    </div>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='container mx-auto'>
+  <div className='max-w-screen-2xl mx-auto'>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
