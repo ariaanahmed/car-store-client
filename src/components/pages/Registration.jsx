@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { sendEmailVerification, updateProfile } from "firebase/auth";
+import SocialLogins from "./SocialLogins";
 
 const Registration = () => {
     const [message, setMessage] = useState('')
@@ -9,7 +10,6 @@ const Registration = () => {
     const {createUser} = useContext(AuthContext)
 
     const handleRegistration = (event) => {
-
         event.preventDefault();
 
         const form = event.target;
@@ -68,6 +68,7 @@ const Registration = () => {
                             <div className="form-control">
                                 <button className="btn btn-primary">sign up</button>
                             </div>
+                            <SocialLogins/>
                         <p className="font-semibold text-center"><small>{message}</small></p>
                         </div>
                     </div>

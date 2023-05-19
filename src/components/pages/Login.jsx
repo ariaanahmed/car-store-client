@@ -1,14 +1,19 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import SocialLogins from "./SocialLogins";
 
 const Login = () => {
     const [message, setMessage] = useState('')
-    const {signIn} = useContext(AuthContext)
+    const { signIn } = useContext(AuthContext)
+
+    const navigate = useNavigate();
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = (event) => {
         event.preventDefault();
-        
+
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
@@ -19,6 +24,8 @@ const Login = () => {
             console.log(loggedUser);
             form.reset()
             setMessage('logged in successfully')
+            navigate(from, {replace: true});
+            
         }).catch((error) => {
             setMessage(error.message)
         })
@@ -47,7 +54,8 @@ const Login = () => {
                             <div className="form-control">
                                 <button className="btn btn-primary">Login</button>
                             </div>
-                        <p className="font-bold text-center"><small>{message}</small></p>
+                            <SocialLogins/>
+                            <p className="font-bold text-center"><small>{message}</small></p>
                         </div>
                     </div>
                 </div>
