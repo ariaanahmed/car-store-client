@@ -15,6 +15,7 @@ import MyToys from './components/pages/MyToys';
 import Blogs from './components/pages/Blogs';
 import Login from './components/pages/Login';
 import Registration from './components/pages/Registration';
+import AuthProvider from './components/provider/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -27,27 +28,27 @@ const router = createBrowserRouter([
       },
       {
         path: '/alltoys',
-        element: <AllToys/>
+        element: <AllToys />
       },
       {
         path: '/addatoy',
-        element: <AddAToy/>
+        element: <AddAToy />
       },
       {
         path: '/MyToys',
-        element: <MyToys/>
+        element: <MyToys />
       },
       {
         path: '/blogs',
-        element: <Blogs/>
+        element: <Blogs />
       },
       {
         path: '/Login',
-        element: <Login/>
+        element: <Login />
       },
       {
         path: '/Registration',
-        element: <Registration/>
+        element: <Registration />
       }
     ]
   },
@@ -62,7 +63,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <div className='max-w-screen-2xl mx-auto'>
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </React.StrictMode>
   </div>
 )
