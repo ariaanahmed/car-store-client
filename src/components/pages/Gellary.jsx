@@ -11,30 +11,30 @@ const Gellary = () => {
     return (
         <div>
             <h2 className='px-1 text-center font-bold text-4xl py-8'>Photo Gellary</h2>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-1 px-1 mx-auto'>
-                <div>
-                    <img className='w-full h-60' src={img1} alt="img-card" />
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-5 px-1 mx-auto'>
+                <div className='card bg-base-100 shadow-xl p-5 border'>
+                    <img className='w-full h-60 rounded-xl' src={img1} alt="img-card" />
                 </div>
-                <div>
-                    <img className='w-full h-60' src={img2} alt="img-card" />
+                <div className='card bg-base-100 shadow-xl p-5 border'>
+                    <img className='w-full h-60 rounded-xl' src={img2} alt="img-card" />
                 </div>
-                <div>
-                    <img className='w-full h-60' src={img3} alt="img-card" />
+                <div className='card bg-base-100 shadow-xl p-5 border'>
+                    <img className='w-full h-60 rounded-xl' src={img3} alt="img-card" />
                 </div>
-                <div>
-                    <img className='w-full h-60' src={img4} alt="img-card" />
+                <div className='card bg-base-100 shadow-xl p-5 border'>
+                    <img className='w-full h-60 rounded-xl' src={img4} alt="img-card" />
                 </div>
-                <div>
-                    <img className='w-full h-60' src={img5} alt="img-card" />
+                <div className='card bg-base-100 shadow-xl p-5 border'>
+                    <img className='w-full h-60 rounded-xl' src={img5} alt="img-card" />
                 </div>
-                <div>
-                    <img className='w-full h-60' src={img6} alt="img-card" />
+                <div className='card bg-base-100 shadow-xl p-5 border'>
+                    <img className='w-full h-60 rounded-xl' src={img6} alt="img-card" />
                 </div>
-                <div>
-                    <img className='w-full h-60' src={img7} alt="img-card" />
+                <div className='card bg-base-100 shadow-xl p-5 border'>
+                    <img className='w-full h-60 rounded-xl' src={img7} alt="img-card" />
                 </div>
-                <div>
-                    <img className='w-full h-60' src={img8} alt="img-card" />
+                <div className='card bg-base-100 shadow-xl p-5 border'>
+                    <img className='w-full h-60 rounded-xl' src={img8} alt="img-card" />
                 </div>
             </div>
         </div>
