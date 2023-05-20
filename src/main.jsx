@@ -19,6 +19,7 @@ import AuthProvider from './components/provider/AuthProvider';
 import RegularCars from './components/Home/RegularCars';
 import Trucks from './components/Home/Trucks';
 import SportCars from './components/Home/SportCars';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -55,17 +56,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/regularcars/:id',
-        element: <RegularCars/>,
+        element: <PrivateRoute> <RegularCars/> </PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
       },
       {
         path: '/truck/:id',
-        element: <Trucks/>,
+        element: <PrivateRoute> <Trucks/> </PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
       },
       {
         path: '/sportcars/:id',
-        element: <SportCars/>,
+        element: <PrivateRoute> <SportCars/> </PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
       },
     ]
