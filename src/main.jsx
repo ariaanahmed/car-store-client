@@ -16,6 +16,9 @@ import Blogs from './components/pages/Blogs';
 import Login from './components/pages/Login';
 import Registration from './components/pages/Registration';
 import AuthProvider from './components/provider/AuthProvider';
+import RegularCars from './components/Home/RegularCars';
+import Trucks from './components/Home/Trucks';
+import SportCars from './components/Home/SportCars';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +52,22 @@ const router = createBrowserRouter([
       {
         path: '/Registration',
         element: <Registration />
-      }
+      },
+      {
+        path: '/regularcars/:id',
+        element: <RegularCars/>,
+        loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
+      },
+      {
+        path: '/truck/:id',
+        element: <Trucks/>,
+        loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
+      },
+      {
+        path: '/sportcars/:id',
+        element: <SportCars/>,
+        loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
+      },
     ]
   },
   {
