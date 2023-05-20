@@ -1,5 +1,9 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from '../provider/AuthProvider';
 const AddAToy = () => {
+
+    const {user} = useContext(AuthContext)
 
     const hanldeAddAToy = (event) => {
         event.preventDefault();
@@ -10,7 +14,7 @@ const AddAToy = () => {
         const category = form.category.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
-        const email = form.email.value;
+        const email = form.user?.email;
         const rating = form.rating.value;
 
         const addedToy = { name, photoURL, email, seller, rating, category, price, quantity };
@@ -65,7 +69,7 @@ const AddAToy = () => {
                         <input type="text" placeholder="Sub category" name="category" className="input input-bordered w-full" />
                     </div>
                     <div className="form-control w-1/2">
-                        <input type="email" placeholder="Seller email" name="email" className="input input-bordered w-full" />
+                        <input type="email" placeholder="Seller email" defaultValue={user?.email} readOnly className="input input-bordered w-full" />
                     </div>
                 </div>
                 <div className="md:flex mx-auto mt-10 rounded-lg gap-5">

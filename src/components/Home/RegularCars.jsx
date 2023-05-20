@@ -2,10 +2,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const RegularCars = () => {
     const regularCar = useLoaderData();
-
     const newArryOfDatas = regularCar.Other;
-
-    console.log(newArryOfDatas)
 
     return (
         <div>
