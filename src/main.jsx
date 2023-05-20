@@ -20,6 +20,7 @@ import RegularCars from './components/Home/RegularCars';
 import Trucks from './components/Home/Trucks';
 import SportCars from './components/Home/SportCars';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import UpdateAToy from './components/pages/UpdateAToy';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
         path: '/MyToys',
         element: <MyToys />,
         loader: () => fetch('http://localhost:5000/addatoy')
+      },
+      {
+        path: '/updateatoy/:id',
+        element: <UpdateAToy/>,
+        loader: ({params}) => fetch(`http://localhost:5000/addatoy/${params.id}`) 
       },
       {
         path: '/blogs',
