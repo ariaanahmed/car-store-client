@@ -1,10 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import useTitle from "../hooks/useTitle";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const UpdateAToy = () => {
     useTitle('UpdateAToy')
-
+    const {user} = useContext(AuthContext);
     const updateAToy = useLoaderData()
 
     const { _id, name, photoURL, email, seller, rating, category, price, quantity } = updateAToy;
@@ -18,14 +20,14 @@ const UpdateAToy = () => {
         const category = form.category.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
-        const email = form.email.value;
+        const email = form.user?.email;
         const rating = form.rating.value;
 
         const updatedToy = { name, photoURL, email, seller, rating, category, price, quantity };
 
         console.log(photoURL)
 
-        fetch(`http://localhost:5000/addatoy/${_id}`, {
+        fetch(`https://assignment-11-server-gules.vercel.app/addatoy/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -73,7 +75,7 @@ const UpdateAToy = () => {
                         <input type="text" placeholder="Sub category" name="category" defaultValue={category} className="input input-bordered w-full" />
                     </div>
                     <div className="form-control w-1/2">
-                        <input type="email" placeholder="Seller email" name="email" defaultValue={email} className="input input-bordered w-full" />
+                        <input type="email" placeholder="Seller email" name="email" defaultValue={user?.email} className="input input-bordered w-full" />
                     </div>
                 </div>
                 <div className="md:flex mx-auto mt-10 rounded-lg gap-5">

@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: '/alltoys',
         element: <AllToys />,
-        loader: () => fetch('http://localhost:5000/addatoy')
+        loader: () => fetch('https://assignment-11-server-gules.vercel.app/addatoy')
       },
       {
         path: '/addatoy',
@@ -44,12 +44,12 @@ const router = createBrowserRouter([
       {
         path: '/MyToys',
         element: <MyToys />,
-        loader: () => fetch('http://localhost:5000/addatoy')
+        loader: () => fetch('https://assignment-11-server-gules.vercel.app/addatoy')
       },
       {
         path: '/updateatoy/:id',
         element: <UpdateAToy/>,
-        loader: ({params}) => fetch(`http://localhost:5000/addatoy/${params.id}`) 
+        loader: ({params}) => fetch(`https://assignment-11-server-gules.vercel.app/addatoy/${params.id}`) 
       },
       {
         path: '/blogs',
@@ -66,17 +66,17 @@ const router = createBrowserRouter([
       {
         path: '/regularcars/:id',
         element: <PrivateRoute> <RegularCars/> </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-11-server-gules.vercel.app/tabs/${params.id}`)
       },
       {
         path: '/truck/:id',
         element: <PrivateRoute> <Trucks/> </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-11-server-gules.vercel.app/tabs/${params.id}`)
       },
       {
         path: '/sportcars/:id',
         element: <PrivateRoute> <SportCars/> </PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/tabs/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-11-server-gules.vercel.app/tabs/${params.id}`)
       },
     ]
   },

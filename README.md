@@ -4,16 +4,18 @@
 4. API added
 5. tailwind and daisyul added
 6. hover on profile picture to show the name name of use added
-7. extra two section added =
+7. extra two section added
 8. footer added
 9. private and route created
 10. blogs and about page added
 11. navbar is respossive
-marquee slider section added.
-home page is fully respossive
-.env.local file created and firebase key hidden
-active route added
+12. marquee slider section added.
+13. home page is fully respossive
+14. active route added
+15. join us section added
 
-server site: 
+client side repo: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-ariaanahmed
 
-client: 
+server side repo: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-ariaanahmed
+
+live site link: 
