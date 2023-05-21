@@ -1,8 +1,14 @@
 import { useLoaderData } from "react-router-dom";
 import MyToysCard from "./MyToysCard";
+import { useState } from "react";
 
 const MyToys = () => {
-    const allMyToys = useLoaderData()
+    const loadedAllMyToys = useLoaderData()
+
+    console.log(loadedAllMyToys, 'hiii')
+
+    const [allMyToys, setAllMyToys] = useState(loadedAllMyToys)
+
     return (
         <div className="container mx-auto mb-10">
             <h2 className="text-center font-bold py-5 text-3xl">Total Added Toys: {allMyToys.length}</h2>
@@ -12,6 +18,8 @@ const MyToys = () => {
                     allMyToys.map((myToy) => <MyToysCard
                         key={myToy._id}
                         myToy={myToy}
+                        allMyToys={allMyToys}
+                        setAllMyToys={setAllMyToys}
                     ></MyToysCard>)
                 }
             </div>
