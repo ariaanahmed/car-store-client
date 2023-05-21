@@ -45,6 +45,18 @@ const Blogs = () => {
                     </p>
                 </div>
             </div>
+            {/* question 4 */}
+            <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
+                    <p>4. What is MongoDB aggregate and how does it work?</p>
+                </div>
+                <div className="collapse-content">
+                    <p>
+                        <span className="font-bold">MongoDB aggregate</span>:
+                        MongoDB aggregate is a framework used for data aggregation operations. It enables to perform complex transformations and computations on data.
+                    </p>
+                </div>
+            </div>
         </div>
     );
 };
