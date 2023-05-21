@@ -7,7 +7,12 @@ const AllToysCard = ({ allToy }) => {
 
     const { user } = useContext(AuthContext)
 
-    const { name, photoURL, seller, category, price, quantity } = allToy;
+    const { _id, name, photoURL, seller, category, price, quantity } = allToy;
+
+    const handleButtonDetail = (_id) => {
+        console.log(_id)
+    }
+
     return (
         <div className="overflow-x-auto w-full">
             <table className="table w-full">
@@ -37,7 +42,9 @@ const AllToysCard = ({ allToy }) => {
 
                             {
                                 user ?
-                                    <button className="btn btn-tiny btn-xs">details</button>
+                                    <Link>
+                                        <button onClick={() => handleButtonDetail(_id)} className="btn btn-tiny btn-xs">details</button>
+                                    </Link>
                                     :
                                     <Link to='/login'>
                                         <button className="btn btn-ghost btn-xs">details</button>
