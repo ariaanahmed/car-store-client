@@ -7,8 +7,7 @@ const AllToys = () => {
     
     return (
         <div>
-            {
-                allToys.map((allToy) => <AllToysCard
+            { allToys.map((allToy) => <AllToysCard
                     key={allToy._id}
                     allToy={allToy}
                 ></AllToysCard>)
