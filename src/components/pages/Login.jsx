@@ -2,8 +2,12 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import SocialLogins from "./SocialLogins";
+import useTitle from "../hooks/useTitle";
 
 const Login = () => {
+
+    useTitle('Login')
+
     const [message, setMessage] = useState('')
     const { signIn } = useContext(AuthContext)
 

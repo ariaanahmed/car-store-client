@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { sendEmailVerification, updateProfile } from "firebase/auth";
 import SocialLogins from "./SocialLogins";
+import useTitle from "../hooks/useTitle";
 
 const Registration = () => {
+
+    useTitle('Registration')
+    
     const [message, setMessage] = useState('')
 
     const {createUser} = useContext(AuthContext)
