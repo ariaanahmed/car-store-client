@@ -3,6 +3,9 @@ import useTitle from "../hooks/useTitle";
 import Gellary from "../pages/Gellary";
 import ShopByCategory from "./ShopByCategory";
 
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
 const Home = () => {
 
     useTitle('Home')

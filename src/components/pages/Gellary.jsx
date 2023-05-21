@@ -6,10 +6,16 @@ import img5 from '../../assets/gellary/5.jpg';
 import img6 from '../../assets/gellary/6.jpg';
 import img7 from '../../assets/gellary/7.jpg';
 import img8 from '../../assets/gellary//8.jpg';
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 const Gellary = () => {
+    useEffect(() => {
+        Aos.init({duration: 2000})
+      }, [])
+    
     return (
-        <div>
+        <div data-aos="fade-zoom-in">
             <h2 className='px-1 text-center font-bold text-4xl py-8'>Photo Gellary</h2>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-5 px-1 mx-auto'>
                 <div className='card bg-base-100 shadow-xl p-5 border'>

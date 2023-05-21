@@ -1,3 +1,4 @@
+import Aos from 'aos';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -8,12 +9,16 @@ const ShopByCategory = () => {
     const [toys, setToys] = useState([])
 
     useEffect(() => {
+        Aos.init({duration: 2000})
+      }, [])
+
+    useEffect(() => {
         fetch('http://localhost:5000/tabs').then((res) => res.json())
             .then((data) => setToys(data))
     }, [])
 
     return (
-        <div className='pt-20'>
+        <div className='pt-20' data-aos="fade-zoom-in">
             <Tabs className="text-center border-t-black">
                 <TabList>
                     <Tab>Regular Cars</Tab>
