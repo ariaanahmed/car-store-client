@@ -21,6 +21,7 @@ import Trucks from './components/Home/Trucks';
 import SportCars from './components/Home/SportCars';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import UpdateAToy from './components/pages/UpdateAToy';
+import NotFound from './components/NotFound/NotFound';
 
 const router = createBrowserRouter([
   {
@@ -81,9 +82,7 @@ const router = createBrowserRouter([
   },
   {
     path: '*',
-    element: <div className="text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <h3 className='font-bold text-3xl'>404 not found</h3>
-    </div>
+    element: <NotFound/>
   }
 ]);
 

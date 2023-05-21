@@ -7,9 +7,9 @@
 7. extra two section added =
 8. footer added
 9. private and route created
+10. blogs and about page added
+11. navbar is respossive
 marquee slider section added.
-blogs and about page added
-navbar is respossive
 home page is fully respossive
 .env.local file created and firebase key hidden
 active route added
