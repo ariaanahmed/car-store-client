@@ -19,15 +19,29 @@ const Blogs = () => {
                     <span className="font-bold">Where should we store them on the client-side</span>: Access tokens and refresh tokens should be stored securely on the client-side. Common storage options include encrypted HTTP-only cookies, localStoreage etc.
                 </div>
             </div>
+            {/* quetion 2 */}
             <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
                 <div className="collapse-title text-xl font-medium">
                     <p>2. Compare SQL and NoSQL databases?</p>
                 </div>
                 <div className="collapse-content">
                     <p>
-                        <span className="font-bold">SQL</span>: This databases are structured, use predefined schemas, and are good for complex queries. 
+                        <span className="font-bold">SQL</span>: This databases are structured, use predefined schemas, and are good for complex queries.
                         <br />
                         <span className="font-bold">NoSQL</span>: databases are unstructured, have flexible schemas, scale horizontally, and are suitable for handling large amounts of data and frequent read/write operations.
+                    </p>
+                </div>
+            </div>
+            {/* question 3 */}
+            <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
+                <div className="collapse-title text-xl font-medium">
+                    <p>3. What is express js? and What is Nest JS?</p>
+                </div>
+                <div className="collapse-content">
+                    <p>
+                        <span className="font-bold">ExpressJS</span>: Express.js is a minimalistic web application framework for Node.js, providing a set of features for building web applications and APIs.
+                        <br />
+                        <span className="font-bold">NestJS</span>: Nest.js is a progressive TypeScript-based framework built on top of Express.js, offering a modular and scalable architecture for building server-side applications.
                     </p>
                 </div>
             </div>
