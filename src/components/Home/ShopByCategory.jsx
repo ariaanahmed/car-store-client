@@ -13,7 +13,7 @@ const ShopByCategory = () => {
       }, [])
 
     useEffect(() => {
-        fetch('https://assignment-11-server-gules.vercel.app/tabs').then((res) => res.json())
+        fetch('https://assignment-11-server-side-lovat.vercel.app/tabs').then((res) => res.json())
             .then((data) => setToys(data))
     }, [])
 

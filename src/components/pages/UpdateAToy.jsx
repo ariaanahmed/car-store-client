@@ -27,7 +27,7 @@ const UpdateAToy = () => {
 
         console.log(photoURL)
 
-        fetch(`https://assignment-11-server-gules.vercel.app/addatoy/${_id}`, {
+        fetch(`https://assignment-11-server-side-lovat.vercel.app/addatoy/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

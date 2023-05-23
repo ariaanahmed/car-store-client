@@ -17,7 +17,7 @@ const MyToysCard = ({ myToy, allMyToys, setAllMyToys }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://assignment-11-server-gules.vercel.app/addatoy/${_id}`, {
+                fetch(`https://assignment-11-server-side-lovat.vercel.app/addatoy/${_id}`, {
                     method: "DELETE"
                 })
                     .then((res) => res.json())

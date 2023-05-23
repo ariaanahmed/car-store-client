@@ -7,14 +7,32 @@ const AllToys = () => {
     const allToys = useLoaderData()
 
     useTitle('AllToys')
-    
+
     return (
         <div>
-            { allToys.map((allToy) => <AllToysCard
-                    key={allToy._id}
-                    allToy={allToy}
-                ></AllToysCard>)
-            }
+
+            <div className="overflow-x-auto w-full">
+                <table className="table w-full">
+                    <thead>
+                        <tr>
+                            <th>Photo</th>
+                            <th>Name</th>
+                            <th>seller</th>
+                            <th>category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {allToys.map((allToy) => <AllToysCard
+                            key={allToy._id}
+                            allToy={allToy}
+                        ></AllToysCard>)
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };
