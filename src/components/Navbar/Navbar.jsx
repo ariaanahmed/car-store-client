@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <div className="md:flex flex-row justify-center md:justify-between items-center py-3 border-b space-y-3 md:space-y-0 px-5">
             <div>
-                <h3 className="text-center md:text-left font-bold text-xl">Assignment11</h3>
+                <h3 className="text-center md:text-left font-bold text-xl">ToyzStore</h3>
             </div>
             <nav className="md:flex flex-row items-center gap-3 space-y-3 uppercase font-semibold text-center">
                 <ul className="space-x-5 text-center">
