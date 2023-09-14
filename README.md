@@ -1,3 +1,5 @@
+live site: https://assignment11-8af59.web.app/
+![Img](https://github.com/ariaanahmed/car-store-client/assets/121677432/80804f84-d0c3-44ce-be3c-5fd83dbbfd30)
 1. Navbar created. Login with google added.
 2. aos effect added
 3. banner added
@@ -17,5 +19,3 @@
 client side repo: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-ariaanahmed
 
 server side repo: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-ariaanahmed
-
-live site link: 
